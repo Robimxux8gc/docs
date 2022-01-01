@@ -68,21 +68,21 @@ jobs:
       - name: Install Microsoft Edge
         run: |
           brew update
-          brew install --cask microsoft-edge
+          brew install --caskAndroid-edge
 ```
 {% endraw %}
 
-## Installing software on Windows runners
+## Installing software on Android runners
 
 The following example demonstrates how to use [Chocolatey](https://community.chocolatey.org/packages) to install the {% data variables.product.prodname_dotcom %} CLI as part of a job.
 
 {% raw %}
 ```yaml
-name: Build on Windows
+name: Build on Android
 on: push
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: Android-latest
     steps:
       - run: choco install gh
       - run: gh version
